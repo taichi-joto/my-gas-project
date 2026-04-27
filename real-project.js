@@ -34,7 +34,7 @@ function helloWorld() {
     var body = newDoc.getBody();
     body.appendParagraph("【支援記録】");
     body.appendParagraph("本日の活動：公園でのレクリエーション");
-    body.appendParagraph("作成日：" + new Date().toLocaleDateString());
+    body.appendParagraph("作成日：" + Utilities.formatDate(new Date(), "Asia/Tokyo", "yyyy年MM月dd日"));
   
     // 3. 作成されたドキュメントのURL（住所）を画面に表示します
     var url = newDoc.getUrl();
@@ -73,7 +73,7 @@ function helloWorld() {
     var body = doc.getBody();
   
     // 2. 今日の日付と記録内容を準備する
-    var today = new Date().toLocaleDateString();
+    var today = Utilities.formatDate(new Date(), "Asia/Tokyo", "yyyy年MM月dd日");
     var message = "【" + today + "】 本日も全員元気に活動を終了しました。";
   
     // 3. ドキュメントの最後に追記する
