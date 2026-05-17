@@ -68,7 +68,7 @@ function helloWorld() {
   function appendRecord() {
     // 1. 追記したいドキュメントのIDを指定して開く
     // ★以下の「あなたのドキュメントID」を、先ほどコピーしたものに書き換えてください
-    var docId = "1mDGXSTK1ppB7aJEb6qWdVfaL9lwYl43ntzPmMlUKKeI"; 
+    var docId = PropertiesService.getScriptProperties().getProperty("DOC_ID"); 
     var doc = DocumentApp.openById(docId);
     var body = doc.getBody();
   
